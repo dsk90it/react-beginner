@@ -1,6 +1,22 @@
+# DEPS
+node_modules
+
 # OS
 .DS_Store
 thumbs.db
+
+# LOGS
+logs
+*.log
+npm-debug.log*
+yarn-error.log
+yarn-debug.log*
+yarn-error.log*
+
+# YARN
+.pnp/
+.pnp.js
+.yarn-integrity
 
 # IDE
 .vscode
