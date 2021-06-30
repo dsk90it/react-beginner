@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-prop-types</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- URL's changed for react libs. `PropTypes` only work in dev build -->
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+    <script type="text/babel">
+      const rootEl = document.getElementById("root");
+
+      // Functional Component
+      function SayHello({ firstName, lastName }) {
+        return (
+          <div>
+            Hello {firstName} {lastName}!
+          </div>
+        );
+      }
+      SayHello.propTypes = {
+        firstName: PropTypes.string,
+        lastName: PropTypes.string.isRequired,
+      };
+
+      const contentEl = <SayHello firstName={"Senthil"} />;
+
+      ReactDOM.render(contentEl, rootEl);
+    </script>
+  </body>
+</html>

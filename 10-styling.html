@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-styling</title>
+    <style>
+      .box {
+        display: flex;
+        margin: 1rem;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+        flex-direction: row;
+        border: 1px solid #555555;
+        justify-content: center;
+      }
+      .box--small {
+        width: 8rem;
+        height: 4rem;
+      }
+      .box--medium {
+        width: 12rem;
+        height: 6rem;
+      }
+      .box--large {
+        width: 24rem;
+        height: 12rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const rootEl = document.getElementById("root");
+
+      const Box = ({ children, size, style }) => {
+        const sizeClassName = size ? `box--${size}` : null;
+
+        return (
+          <div
+            className={`box ${sizeClassName}`}
+            style={{ fontStyle: "italic", ...style }}
+          >
+            {children}
+          </div>
+        );
+      };
+
+      const contentEl = (
+        <>
+          <Box size="small" style={{ backgroundColor: "lightblue" }}>
+            Small box
+          </Box>
+
+          <Box size="medium" style={{ backgroundColor: "pink" }}>
+            Medium box
+          </Box>
+
+          <Box size="large" style={{ backgroundColor: "orange" }}>
+            Large box
+          </Box>
+        </>
+      );
+      ReactDOM.render(contentEl, rootEl);
+    </script>
+  </body>
+</html>
