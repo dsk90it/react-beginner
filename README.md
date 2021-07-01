@@ -1,8 +1,10 @@
-# 👨‍🏫️ React Beginners Guide.
+# 👨‍🏫️ React Beginners Guide [![Netlify Status](https://api.netlify.com/api/v1/badges/16377398-0016-49c0-a595-31640f8fd6a2/deploy-status)](https://app.netlify.com/sites/kcd-course/deploys)
 
-A Beginners Guide to React Introduction by Kent C. Dodds - Checkout this course [here](https://egghead.io/courses/the-beginner-s-guide-to-react)
+A Beginners Guide to React Introduction by Kent C. Dodds - Checkout this [course](https://egghead.io/courses/the-beginner-s-guide-to-react)
 
 ## 🚀 Demo
+
+https://kcd-course.netlify.app/
 
 ## ⚙ Installation
 
